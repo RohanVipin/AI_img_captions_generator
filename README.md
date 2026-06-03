@@ -4,56 +4,58 @@ AI Image Caption Generator is a Streamlit-based web application that generates i
 
 ### Users can upload a JPEG image and instantly receive:
 
-Formal Caption – Professional and objective description
-Casual Caption – Friendly and conversational description
-SEO Caption – Keyword-rich caption optimized for discoverability
-Alt Text – Accessibility-focused description compliant with WCAG guidelines
+Formal Caption – Professional and objective description<br>
+Casual Caption – Friendly and conversational description<br>
+SEO Caption – Keyword-rich caption optimized for discoverability<br>
+Alt Text – Accessibility-focused description compliant with WCAG guidelines<br>
 
 ## Features
-1.Upload JPEG/JPG images
-2.AI-powered image understanding using Gemini
-3.Generates four caption styles simultaneously
-4.Simple and responsive Streamlit interface
-5.Environment variable support for secure API key management
-6.Ready for cloud deployment
+- Upload JPEG/JPG images
+- AI-powered image understanding using Gemini
+- Generates four caption styles simultaneously
+- Simple and responsive Streamlit interface
+- Environment variable support for secure API key management
+- Ready for cloud deployment
 
 ## Caption Types
-Type	           Description
-Formal	           Professional, objective, 2–3 sentences
-Casual	           Friendly and conversational
-SEO	               15–25 words, keyword-rich
-Alt Text	       WCAG-compliant, under 125 characters
+
+| Type | Description |
+|------|-------------|
+| Formal | Professional, objective, 2–3 sentences |
+| Casual | Friendly and conversational |
+| SEO | 15–25 words, keyword-rich |
+| Alt Text | WCAG-compliant, under 125 characters |
 
 ## Tech Stack 
-Python
-Streamlit
-Google Gemini API
-Pillow
-Python Dotenv
+- Python
+- Streamlit
+- Google Gemini API
+- Pillow
+- Python Dotenv
 
 ## Installation
 ### Clone Repository
-git clone <repository-url>
-cd AI_img_captions_generator
+- git clone <repository-url>
+- cd AI_img_captions_generator
 
 ### Create Virtual Environment
 python -m venv venv
 
 ### Activate the environment:
 
-Windows:
-venv\Scripts\activate
+Windows:<br>
+venv\Scripts\activate<br>
 
-Linux/Mac:
-source venv/bin/activate
+Linux/Mac:<br>
+source venv/bin/activate<br>
 
 ### Install Dependencies
 pip install -r requirements.txt
 
 ## Configure API Key
 
-Create a .env file in the project root:
-GEMINI_API_KEY=YOUR_API_KEY_HERE
+Create a .env file in the project root:<br>
+GEMINI_API_KEY=YOUR_API_KEY_HERE<br>
 
 Do not commit this file to GitHub.
 
@@ -66,15 +68,15 @@ The application will start locally and open in your browser.
 ![Sample Image](cat_dog_petting.jpg)
 
 ### Captions generated
-!(Output_sample.png)
+![Captions generated](Output_sample.png)
 
 ## Future Improvements 
-Support PNG and WebP images
-Caption history
-Social media caption generation
-Multi-language caption support
-Download captions as text files
-Batch image processing
+- Support PNG and WebP images
+- Caption history
+- Social media caption generation
+- Multi-language caption support
+- Download captions as text files
+- Batch image processing
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
