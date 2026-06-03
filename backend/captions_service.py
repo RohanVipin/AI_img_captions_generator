@@ -1,13 +1,16 @@
 from dotenv import load_dotenv
 from prompts import caption_prompt
-import os 
+import streamlit as st
+import os
 from google import genai
 import json
 from google.genai import types
 
 load_dotenv()
 
-API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = (
+    st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+)
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY not found")
 
@@ -43,3 +46,4 @@ def generate_captions(image_bytes,mime_type):
     return json.loads(raw_response)
 
 
+ 
