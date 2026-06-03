@@ -1,8 +1,9 @@
 from dotenv import load_dotenv
-from prompts import CAPTION_PROMPT
+from prompts import caption_prompt
 import os 
 from google import genai
 import json
+from google.genai import types
 
 load_dotenv()
 
@@ -14,15 +15,19 @@ client = genai.Client(
     api_key=API_KEY
 )
 
+
 def generate_captions(image_bytes,mime_type):
+
+    image_part = types.Part.from_bytes(
+        data = image_bytes,
+        mime_type=mime_type
+    )
+
     response = client.models.generate_content(
     model = 'gemini-3.5-flash',
     contents =[
-        {
-            'mime_type':mime_type,
-            'data':image_bytes
-        },
-        CAPTION_PROMPT
+        image_part,
+        caption_prompt
         ] 
     )
 
